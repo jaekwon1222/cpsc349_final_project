@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaekwon Lee's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Jaekwon Lee</h1>
+        <nav>
+            <a href="#myhero">Home</a>
+            <a href="#tools">Tools</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="myhero" class="hero-section">
+        <h2>Welcome to My Portfolio</h2>
+        <img src="assets/hero.jpeg" alt="Jaekwon Lee">
+        <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." – Winston Churchill</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools">
+        <h2>Tools</h2>
+        <div class="tool-container">
+            <div class="tool-card">
+                <img src="assets/html5.png" alt="HTML5">
+                <p>HTML5</p>
+            </div>
+            <div class="tool-card">
+                <img src="assets/css.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="tool-card">
+                <img src="assets/c++.png" alt="C++">
+                <p>C++</p>
+            </div>
+            <div class="tool-card">
+                <img src="assets/python.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="tool-card">
+                <img src="assets/react.png" alt="React">
+                <p>React</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a Computer Science graduate passionate about creating innovative solutions with experience in web development, software engineering, and data analysis.</p>
+        <a href="assets/resume.pdf" download>Download Resume</a>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level of Education</th>
+                        <th>Institute Name</th>
+                        <th>Major</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelors</td>
+                        <td>California State University, Fullerton</td>
+                        <td>Computer Science</td>
+                        <td>3.67</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar" data-skill="90%"></div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="progress-bar" data-skill="85%"></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="progress-bar" data-skill="80%"></div>
+            </div>
+            <div class="skill">
+                <p>React</p>
+                <div class="progress-bar" data-skill="75%"></div>
+            </div>
+            <div class="skill">
+                <p>Python</p>
+                <div class="progress-bar" data-skill="70%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Knifex Webpage</h3>
+                <p>Gaming item trading website built with React and Python.</p>
+                <a href="knifex-details.html">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" id="name">
+            <input type="email" placeholder="Your Email" id="email">
+            <textarea placeholder="Your Message" id="message"></textarea>
+            <button type="button" id="submit-button">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with me on:</p>
+        <a href="https://www.instagram.com/jaekwon1222/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/jaekwon.lee.509/"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/jaekwon1222"><i class="fab fa-github"></i></a>
+    </footer>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields before submitting!');
+                return;
+            }
+
+            alert(`Thank you, ${name}! Your message has been sent.`);
+
+            // Reset form fields
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>
